@@ -10,10 +10,16 @@ const Countries = () => {
             .then(data => setCountrise(data))
     },[])
     return (
-        <div>
+        <div >
+            <h1>The Countries Deatils Of any country</h1>
+           <div className='countries-container'>
            {
-               countries.map(country => <Country country={country}></Country> )
+               countries.map(country => <Country
+                 country={country}
+                 key={country.cca3}
+                 ></Country> )
            }
+           </div>
         </div>
     );
 };
